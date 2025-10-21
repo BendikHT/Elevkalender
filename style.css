@@ -1,0 +1,107 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center main content */
+}
+
+/* --- Header Styling (Elevkalender) --- */
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header h1 {
+    /* To place it in the middle top corner */
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+/* --- Link Container Styling --- */
+.link-container {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- List and Link Styling --- */
+#link-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+}
+
+#link-list li {
+    margin: 15px 0;
+}
+
+#link-list a {
+    display: block; /* Makes the entire list item clickable */
+    text-decoration: none;
+    background-color: #e9ecef;
+    color: #007bff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#link-list a:hover,
+#link-list a:focus {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* --- MEDIA QUERIES (Responsiveness) --- */
+
+/* 1. Tablet and Desktop Screens (Larger than 768px) */
+@media (min-width: 768px) {
+    .header h1 {
+        font-size: 3em; /* Larger title */
+    }
+
+    .link-container {
+        padding: 60px 40px;
+        max-width: 600px; /* Tighter container for a clean look */
+    }
+
+    #link-list a {
+        padding: 20px 30px; /* Larger buttons */
+    }
+}
+
+/* 2. Mobile Screens (Smaller than 600px) */
+@media (max-width: 600px) {
+    .header {
+        padding: 15px 0;
+    }
+    
+    .header h1 {
+        font-size: 2em; /* Smaller title on mobile */
+    }
+
+    .link-container {
+        margin: 15px;
+        padding: 20px 10px;
+        box-shadow: none; /* Reduce shadows on mobile */
+    }
+    
+    #link-list a {
+        font-size: 1em;
+        padding: 12px 15px; /* Smaller padding on mobile */
+    }
+}

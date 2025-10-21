@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevkalender Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Elevkalender</h1>
+    </header>
+
+    <main class="link-container">
+        <ul id="link-list">
+            <li><a href="bitbolle.html" target="_blank">Bit rabatt</a></li>
+            </ul>
+    </main>
+
+    <script >
+        document.addEventListener('DOMContentLoaded', () => {
+        const links = document.querySelectorAll('#link-list a');
+
+            links.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    // Log to the console when a link is clicked
+                    console.log(`Navigating to: ${event.target.href}`);
+                    // Note: The browser will still follow the link.
+                });
+            });
+
+            console.log('Elevkalender homepage loaded successfully!');
+        });
+    </script>
+    
+</body>
+</html>
