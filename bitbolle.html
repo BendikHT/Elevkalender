@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIT UNION Coupon App Simulation</title>
+    <link rel="stylesheet" href="bitbolle.css">
+</head>
+
+<body>
+
+    <div id="screen-offer" class="screen active">
+        <header>
+            <span class="back-arrow" onclick="alert('This would go back to the main list.')">
+                &lt;
+            </span>
+        </header>
+        <main class="offer-card-container">
+            <img src="bolleutenkryss.png" alt="BIT UNION: 1 gratis valgfri bolle"
+                class="coupon-image">
+            <button class="action-button primary" onclick="showScreen('screen-confirm')">Bruk kupong</button>
+        </main>
+    </div>
+
+    <div id="screen-confirm" class="screen hidden">
+        <header>
+            <span class="back-arrow" onclick="showScreen('screen-offer')">&lt; Bruk kupong</span>
+        </header>
+        <main class="confirmation-content">
+            <div class="illustration">
+                <img src="placeholder-illustration.png" alt="Illustration of person using coupon at register">
+            </div>
+
+            <h2>RABATTKUPONGER OKTOBER</h2>
+
+            <p class="warning-text">
+                <strong>OBS!</strong> Kupongen gjelder kun i butikk. Ikke trykk på **Bruk kupong** før en butikkansatt
+                har sett den.
+            </p>
+
+            <div class="action-group">
+                <button class="action-button primary" onclick="showScreen('screen-used')">Hent QR-kode</button>
+                <button class="action-button secondary" onclick="showScreen('screen-offer')">Avbryt</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="screen-used" class="screen hidden">
+        <header>
+            <span class="back-arrow"> Tilbake </span>
+        </header>
+        <main class="offer-card-container">
+            <img src="bollekryss.jpg" alt="BIT UNION: 1 gratis valgfri bolle - BRUKT"
+                class="coupon-image used-coupon">
+            <button class="action-button primary disabled">Kupongen er brukt</button>
+        </main>
+    </div>
+
+    <script>// Function to switch between the different app screens
+        function showScreen(screenId) {
+            // Get all screen elements
+            const screens = document.querySelectorAll('.screen');
+
+            // Hide all screens
+            screens.forEach(screen => {
+                screen.classList.remove('active');
+                screen.classList.add('hidden');
+            });
+
+            // Show the target screen
+            const targetScreen = document.getElementById(screenId);
+            if (targetScreen) {
+                targetScreen.classList.remove('hidden');
+                targetScreen.classList.add('active');
+
+                // Log the transition for demonstration
+                console.log(`Transitioned to screen: ${screenId}`);
+            }
+        }
+
+        // Ensure the initial screen is set correctly on load
+        document.addEventListener('DOMContentLoaded', () => {
+            // This will make sure only 'screen-offer' is visible at the start
+            showScreen('screen-offer');
+        });</script>
+</body>
+
+</html>
