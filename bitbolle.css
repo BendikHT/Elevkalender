@@ -85,19 +85,18 @@ header {
 }
 
 .warning-text-top {
-    padding: 15px;
     margin: 20px 0;
-    text-align: left;
+    text-align: center;
     font-weight: 600;
     border-radius: 4px;
 }
 
 .warning-text-bottom {
-    padding: 15px;
-    margin: 20px 0;
-    text-align: left;
+    text-align: center;
     font-weight: 600;
-    border-radius: 4px;
+    width: 60%;
+    margin: auto;
+    line-height: 1.6;
 }
 
 .action-button {
