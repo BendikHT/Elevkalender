@@ -106,11 +106,9 @@ header {
     padding: 15px;
     margin-top: 10px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 1.1em;
-    font-weight: bold;
-    transition: background-color 0.2s;
+    font-size: 20px;
 }
 
 .primary {
@@ -136,4 +134,15 @@ header {
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.brukt-box-bakgrund {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.582);
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2000;
 }

@@ -15,15 +15,14 @@
             <img src="header.jpg" style="width: 100%;">
         </header>
         <main class="offer-card-container">
-            <img src="bolleutenkryss.png" alt="BIT UNION: 1 gratis valgfri bolle"
-                class="coupon-image">
+            <img src="bolleutenkryss.png" alt="BIT UNION: 1 gratis valgfri bolle" class="coupon-image">
             <button class="action-button primary" onclick="showScreen('screen-confirm')">Bruk kupong</button>
         </main>
     </div>
 
     <div id="screen-confirm" class="screen hidden">
         <header>
-            <span class="back-arrow" onclick="showScreen('screen-offer')">&lt; Bruk kupong</span>
+            <img src="header.jpg" style="width: 100%;">
         </header>
         <main class="confirmation-content">
             <div class="illustration">
@@ -33,7 +32,7 @@
             <h2>RABATTKUPONGER OKTOBER</h2>
 
             <p class="warning-text-top">
-                OBS! Kupongen gjelder kun i butikk. 
+                OBS! Kupongen gjelder kun i butikk.
             </p>
             <p class="warning-text-bottom">
                 Ikke trykk på Bruk kupong før en butikkansatt
@@ -41,7 +40,7 @@
             </p>
 
             <div class="action-group">
-                <button class="action-button primary" onclick="showScreen('screen-used')">Hent QR-kode</button>
+                <button class="action-button primary" onclick="showScreen('screen-used')">Bruk kupong</button>
                 <button class="action-button secondary" onclick="showScreen('screen-offer')">Avbryt</button>
             </div>
         </main>
@@ -49,12 +48,16 @@
 
     <div id="screen-used" class="screen hidden">
         <header>
-            <span class="back-arrow"> Tilbake </span>
+            <img src="header.jpg" style="width: 100%;">
         </header>
         <main class="offer-card-container">
-            <img src="bollekryss.jpg" alt="BIT UNION: 1 gratis valgfri bolle - BRUKT"
-                class="coupon-image used-coupon">
-            <button class="action-button primary disabled">Kupongen er brukt</button>
+            <img src="bollekryss.jpg" alt="BIT UNION: 1 gratis valgfri bolle - BRUKT" class="coupon-image used-coupon">
+            <div class="brukt-box-bakgrund">
+                <div class="brukt-box">
+                    <p>Kupongen er brukt</p>
+                    <p>OK</p>
+                </div>
+            </div>
         </main>
     </div>
 
