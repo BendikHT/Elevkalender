@@ -102,13 +102,14 @@ header {
 }
 
 .action-button {
-    width: 100%;
+    width: 60%;
     padding: 15px;
     margin-top: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .primary {
@@ -150,6 +151,13 @@ header {
     z-index: 2000;
 }
 .brukt-box {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
     background-color: rgb(255, 255, 255);
     color: black;
+    width: 50%;
+    height: 80px;
+    padding: 15px;
+    border-radius: 10px;
 }
