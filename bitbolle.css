@@ -152,10 +152,12 @@ header {
     margin: 0px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: rgb(255, 255, 255);
     color: black;
     width: 50%;
     height: 80px;
     padding: 15px;
     border-radius: 10px;
+    font-size: 18px;
 }
